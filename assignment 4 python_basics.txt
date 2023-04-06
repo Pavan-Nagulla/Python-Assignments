@@ -1,0 +1,102 @@
+1.Why are functions advantageous to have in your programs ?
+Ans) functions are the blocks of elements . functions can be called multiple times using function name . using functions , multiple lines of code will be reduce and code resuable . so, it always functions are advantageous to have in programs .
+
+2) when does the code in a function run: when it's specified or when it's called ?
+Ans) the code in the function are always runned when the function are called in the program.
+
+3)what statement creates a function ?
+ans ) a function can be created by using "def" keyword and followed by name of functions with parameters.
+
+4) what is the difference between a function and a function call ?
+ans )  A function is a block of code that performs a specific task and can be reused in a program. It is defined with a name, a set of parameters, and a return value (if any). Functions are used to modularize code, making it easier to read, write, test, and maintain.
+
+On the other hand, a function call is an instruction that invokes or executes a specific function. It involves using the function name followed by a set of parentheses containing any required arguments. When a function is called, the program control is transferred to the function, and the code inside the function is executed.
+
+In simpler terms, a function is like a recipe or a set of instructions, whereas a function call is like using those instructions to prepare a dish. A function is defined once and can be used multiple times by calling it with different arguments. In contrast, a function call is executed each time it is encountered in the program
+
+5) how many global scopes are there in a python program ? how many local scopes ?
+ans) In a Python program, there is only one global scope, which is created when the program starts executing. Any variable or function defined outside of a function or class belongs to this global scope.
+
+On the other hand, local scopes are created whenever a function is called. Each function call creates a new local scope where the function's parameters and local variables are stored. When the function call ends, the local scope is destroyed along with its variables.
+
+Therefore, the number of local scopes in a Python program depends on how many times functions are called during the program's execution. Each function call creates a new local scope, so the number of local scopes can vary.
+
+It's important to note that Python also has a built-in namespace, which is a special type of global scope that contains the names of all built-in functions, modules, and exceptions. This namespace is always present and can be accessed from any part of the program.
+
+6) What happens to variables in a local scope when the function call returns?
+ans ) When a function call returns, the local scope created by that call is destroyed, and all the variables and their values stored in that scope are lost.
+
+Any variables declared within the function, as well as the function's parameters, are destroyed along with the local scope. These variables cannot be accessed from outside the function or from other parts of the program.
+
+However, any values returned by the function can be assigned to variables in the calling scope. These variables will then be accessible and can be used outside the function.
+
+It's important to note that if a variable is defined in the global scope (outside of any function) and is modified within a function, the global variable's value will be changed. This is because Python searches for the variable name in the local scope first, and if it's not found, it looks for it in the global scope. If it's found in the global scope, the variable in the global scope is used and modified. If the global variable needs to be modified within a function, it can be accessed using the global keyword to indicate that the variable should be treated as a global variable rather than a local variable
+
+7) What is the concept of a return value? Is it possible to have a return value in an expression?
+ans) in Python, a return value is a value that a function can send back to the caller. It allows the function to communicate information back to the caller about what it did or what it found, which the caller can then use to make decisions or perform additional actions.
+
+When a function returns a value, it uses the return keyword followed by the value to be returned. The return statement also ends the function's execution, so any code after the return statement will not be executed.
+
+8) If a function does not have a return statement, what is the return value of a call to that function?
+
+ans) If a function does not have a return statement, the return value of a call to that function will be None.
+
+In Python, if a function does not explicitly return a value using the return keyword, it still returns a value, which is the None object. None is a built-in Python object that represents the absence of a value or a null value.
+
+9) How do you make a function variable refer to the global variable? 
+
+ans) In Python, if you want to use a global variable inside a function, you can use the global keyword to declare the variable as a global variable. This tells Python that the variable should be treated as a global variable, even if there is a local variable with the same name.
+
+10) What is the data type of None?
+ans) In Python, None is a built-in constant object that represents the absence of a value or a null value. It is a singleton object of the NoneType data type, which is a built-in data type in Python.
+
+NoneType has only one possible value, which is None. The None object is often used to indicate the absence of a value, or as a default return value for functions that do not have a specific return value.
+
+11) What does the sentence import areallyourpetsnamederic do? 
+ans) The sentence "import areallyourpetsnamederic" is not a standard Python import statement and does not refer to any existing Python module.
+
+In Python, the import statement is used to import modules, which are pre-written Python code that can be used to add functionality to your program. When you import a module, you can use the functions, classes, and variables defined in that module in your program. 
+
+12 ) If you had a bacon() feature in a spam module, what would you call it after importing spam? 
+ans)  If you have a bacon() function in a spam module and you import the spam module in your Python program, you can call the bacon() function using the dot notation to access the function from the imported module.
+
+Here's an example:
+import spam
+
+spam.bacon()
+In this code, we import the spam module using the import statement. We can then call the bacon() function in the spam module using the dot notation, like this: spam.bacon().
+
+This calls the bacon() function in the spam module and executes its code. You can replace spam with the name of the actual module you're importing and bacon() with the name of the actual function you want to call.
+
+13) What can you do to save a programme from crashing if it encounters an error?
+ans )
+
+
+There are several techniques you can use to prevent a Python program from crashing when it encounters an error:
+
+Exception Handling: You can use exception handling to catch and handle errors that occur during program execution. This involves wrapping the code that might cause an error in a try block, and using except blocks to handle any exceptions that are raised. For example:
+
+try:
+    # code that might raise an exception
+except:
+    # handle the exception
+By handling exceptions, you can prevent the program from crashing and take appropriate action based on the type of error that occurred.
+
+Input validation: If your program requires user input, you can validate the input to ensure it is of the expected type and format before using it in your code. This can prevent errors from occurring due to incorrect input.
+
+Defensive programming: This involves writing code that anticipates and handles unexpected conditions, such as invalid input or unexpected data. By designing your code to handle unexpected conditions, you can prevent errors from causing the program to crash.
+
+Logging: You can use Python's built-in logging module to log errors and other important information during program execution. This can help you identify and debug issues that might cause your program to crash.
+
+Testing: You can test your code thoroughly to identify and fix errors before deploying it. This can help prevent your program from crashing due to errors that were not caught during development.
+
+By using these techniques, you can make your Python program more robust and prevent it from crashing when it encounters errors.
+
+14) What is the purpose of the try clause? What is the purpose of the except clause?
+ans) The try and except clauses in Python are used together to implement exception handling, which allows you to handle errors that may occur during program execution.
+
+The purpose of the try clause is to wrap the code that might cause an error. The code inside the try block is executed normally, but if an error occurs during execution, the program flow is immediately transferred to the except block.
+
+The purpose of the except clause is to catch and handle the exceptions that are raised in the try block. If an exception occurs in the try block, the program flow is transferred to the except block. The code inside the except block is executed, and any necessary error handling or cleanup can be performed.
+
+
